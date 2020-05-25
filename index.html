@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tabs</title>
+</head>
+<body>
+	<div class="tabs">
+		<input type="radio" name="r" id="r1" checked>
+		<input type="radio" name="r" id="r2">
+		<input type="radio" name="r" id="r3">
+
+
+
+		<nav>
+			<label for="r1" class="navLinks nav1">Первая вкладка</label>
+			<label for="r2" class="navLinks nav2">Вторая вкладка</label>
+			<label for="r3" class="navLinks nav3">Третья вкладка</label>
+		</nav>
+		<div class="text1">Первая вкладка Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et deleniti autem laudantium ipsa perferendis repellendus, ea expedita libero saepe, minima, provident eius adipisci veritatis! Cum recusandae voluptates soluta nostrum aliquam. </div>
+		<div class="text2">Вторая вкладка Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et deleniti autem laudantium ipsa perferendis repellendus, ea expedita libero saepe, minima, provident eius adipisci veritatis! Cum recusandae voluptates soluta nostrum aliquam. laudantium ipsa perferendis repellendus, ea expedita libero saepe, minima, provident eius adipisci veritatis! Cum recusandae voluptates soluta nostrum aliquam.</div>
+		<div class="text3">Третья вкладка Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et deleniti autem laudantium ipsa perferendis repellendus, ea expedita libero saepe, minima, provident eius adipisci veritatis! Cum recusandae voluptates soluta nostrum aliquam. </div>
+	</div>
+</body>
+<style>
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	padding: 50px 0;
+}
+.tabs{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+nav{
+	display: flex;
+}
+	.navLinks{
+		flex: 1;
+		text-align: center;
+		cursor: default;
+		padding: 15px;
+		text-transform: uppercase;
+	}
+.text1{
+	background: pink;
+	padding: 20px;
+	display: none;
+}
+.text2{
+	background: green;
+	padding: 20px;
+	display: none;
+}
+.text3{
+	background: aqua;
+	padding: 20px;
+	display: none;
+}
+
+#r1:checked ~ .text1{
+	display: block;
+}
+#r1:checked ~ nav .nav1{
+	background: pink;
+}
+#r2:checked ~ .text2{
+	display: block;
+}
+#r2:checked ~ nav .nav2{
+	background: green;
+}
+#r3:checked ~ .text3{
+	display: block;
+}
+#r3:checked ~ nav .nav3{
+	background: aqua;
+}
+.tabs input{
+	visibility: hidden;
+	position: absolute;
+}
+</style>
+</html>
